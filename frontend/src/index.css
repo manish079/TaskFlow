@@ -1,0 +1,329 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* TaskFlow Theme */
+:root {
+  --tf-bg: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 50%, #ecfeff 100%);
+  --tf-elevation: rgba(2, 6, 23, 0.08);
+  --tf-card: #ffffffcc;
+  --tf-border: rgba(2, 6, 23, 0.08);
+  --tf-text: #0f172a;
+  --tf-muted: #64748b;
+  --tf-primary: #6366f1; /* indigo-500 */
+  --tf-primary-600: #4f46e5;
+  --tf-accent: #8b5cf6;  /* violet-500 */
+  --tf-success: #10b981;
+  --tf-danger: #ef4444;
+  --tf-radius: 16px;
+}
+
+/* Root stretch to avoid body centering constraints */
+#root {
+  width: 100%;
+  height: 100vh;
+  align-self: stretch;
+}
+
+/* Auth Layout */
+.auth-wrapper {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 0;
+  min-height: 100vh;
+  background: var(--tf-bg);
+}
+
+@media (max-width: 980px) {
+  .auth-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .auth-art {
+    display: none;
+  }
+}
+
+.auth-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--tf-card);
+  backdrop-filter: saturate(180%) blur(8px);
+  border: 1px solid var(--tf-border);
+  box-shadow: 0 10px 30px var(--tf-elevation);
+  border-radius: var(--tf-radius);
+  padding: 28px;
+}
+
+.tf-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  user-select: none;
+}
+
+.tf-logo .mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--tf-primary), var(--tf-accent));
+  display: grid;
+  place-items: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
+}
+
+.tf-logo .word {
+  font-size: 22px;
+  background: linear-gradient(135deg, #0ea5e9, var(--tf-primary), var(--tf-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.auth-header {
+  margin-top: 8px;
+}
+
+.auth-title {
+  margin: 12px 0 0 0;
+  font-size: 22px;
+  color: var(--tf-text);
+}
+
+.auth-subtitle {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  color: var(--tf-muted);
+}
+
+.tf-toggle {
+  display: inline-flex;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 12px;
+  gap: 4px;
+  border: 1px solid var(--tf-border);
+}
+
+.tf-toggle button {
+  border: 0;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.tf-toggle button.active {
+  background: white;
+  color: var(--tf-text);
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.08);
+}
+
+.tf-form {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.tf-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.tf-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--tf-border);
+  background: #ffffff;
+  color: var(--tf-text);
+  font-size: 14px;
+  outline: none;
+  transition: box-shadow .2s, border-color .2s;
+}
+
+.tf-input::placeholder {
+  color: #94a3b8;
+}
+
+.tf-input:focus {
+  border-color: var(--tf-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+}
+
+.tf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 0;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tf-btn.primary {
+  background: linear-gradient(135deg, var(--tf-primary), var(--tf-accent));
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.35);
+}
+
+.tf-btn.primary:hover {
+  filter: brightness(1.05);
+}
+
+.tf-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.tf-link {
+  color: #475569;
+  font-size: 13px;
+}
+
+.tf-footnote {
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* Right-side Artwork */
+.auth-art {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-art .halo {
+  position: absolute;
+  inset: -15% -10% auto;
+  height: 70%;
+  background: radial-gradient(closest-side, rgba(99,102,241,.18), transparent 60%),
+    radial-gradient(closest-side, rgba(14,165,233,.18), transparent 60%),
+    radial-gradient(closest-side, rgba(139,92,246,.22), transparent 60%);
+  filter: blur(40px);
+}
+
+.auth-art .frame {
+  position: relative;
+  width: min(640px, 90%);
+  aspect-ratio: 1.2/1;
+  background: linear-gradient(135deg, #0ea5e90f, #6366f112);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 30px 120px rgba(2, 6, 23, 0.2);
+  overflow: hidden;
+}
+
+.auth-art .badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: white;
+  border: 1px solid var(--tf-border);
+  color: #0f172a;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.auth-art svg {
+  position: absolute;
+  inset: 0;
+}
+
+/* Use Inter globally; headings with Poppins accent */
+body, input, button {
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, .tf-logo {
+  font-family: "Poppins", "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}

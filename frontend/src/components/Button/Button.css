@@ -1,0 +1,74 @@
+.tf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, transform .15s ease;
+}
+
+.tf-btn.full { width: 100%; }
+
+/* Primary (filled) */
+.tf-btn.primary {
+  color: white;
+  background: linear-gradient(135deg, var(--tf-primary, #6366f1), var(--tf-accent, #8b5cf6));
+  background-size: 200% 200%;
+  box-shadow: 0 10px 24px rgba(99, 102, 241, 0.35);
+}
+.tf-btn.primary:hover { filter: brightness(1.05); animation: tf-gradient-pan 1.8s ease-in-out infinite alternate; }
+
+/* Secondary (elevated dark) */
+.tf-btn.secondary {
+  color: #e5e7eb;
+  background: #1f2937;
+  border: 1px solid #2b3542;
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.25);
+}
+.tf-btn.secondary:hover { background: #233040; }
+
+/* Google */
+.tf-btn.google {
+  color: #111827;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.06);
+}
+.tf-btn.google:hover { background: #fafafa; }
+
+/* Google inside dark card => outlined on dark */
+.auth-card.dark .tf-btn.google {
+  color: #e5e7eb;
+  background: transparent;
+  border: 1px solid #2b3542;
+  box-shadow: none;
+}
+.auth-card.dark .tf-btn.google:hover { background: #0b1220; }
+
+.tf-btn .icon { width: 18px; height: 18px; }
+
+/* Press and focus states */
+.tf-btn:active { transform: translateY(1px) scale(0.995); }
+.tf-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99,102,241,.35), 0 10px 24px rgba(99,102,241,.25);
+}
+
+/* Disabled */
+.tf-btn:disabled,
+.tf-btn[disabled] { opacity: .6; cursor: not-allowed; filter: none; }
+
+/* Keyframes */
+@keyframes tf-gradient-pan {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tf-btn.primary:hover { animation: none; }
+}

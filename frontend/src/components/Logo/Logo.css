@@ -1,0 +1,27 @@
+.tf-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  user-select: none;
+}
+
+.tf-logo .mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--tf-primary), var(--tf-accent));
+  display: grid;
+  place-items: center;
+  color: white;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
+}
+
+.tf-logo .word {
+  font-size: 22px;
+  background: linear-gradient(135deg, #0ea5e9, var(--tf-primary), var(--tf-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

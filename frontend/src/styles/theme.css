@@ -1,0 +1,14 @@
+:root {
+  --tf-bg: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 50%, #ecfeff 100%);
+  --tf-elevation: rgba(2, 6, 23, 0.08);
+  --tf-card: #ffffffcc;
+  --tf-border: rgba(2, 6, 23, 0.08);
+  --tf-text: #0f172a;
+  --tf-muted: #64748b;
+  --tf-primary: #6366f1; /* indigo-500 */
+  --tf-primary-600: #4f46e5;
+  --tf-accent: #8b5cf6;  /* violet-500 */
+  --tf-success: #10b981;
+  --tf-danger: #ef4444;
+  --tf-radius: 16px;
+}

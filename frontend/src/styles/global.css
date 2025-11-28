@@ -1,0 +1,25 @@
+/* Global base styles */
+html, body, #root {
+  height: 100%;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color-scheme: light;
+  color: var(--tf-text, #0f172a);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, .tf-logo {
+  font-family: "Poppins", "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+a { color: #1f2937; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button { font-family: inherit; }

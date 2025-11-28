@@ -1,0 +1,25 @@
+.tf-field { display: grid; gap: 6px; }
+
+.tf-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tf-text, #0f172a);
+}
+
+.tf-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--tf-border, rgba(2, 6, 23, 0.08));
+  background: #ffffff;
+  color: var(--tf-text, #0f172a);
+  font-size: 14px;
+  outline: none;
+  transition: box-shadow .2s, border-color .2s;
+}
+
+.tf-input::placeholder { color: #94a3b8; }
+.tf-input:focus {
+  border-color: var(--tf-primary, #6366f1);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+}
