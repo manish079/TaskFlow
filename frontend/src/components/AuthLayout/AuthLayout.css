@@ -14,6 +14,7 @@
   grid-template-columns: 1fr;
   position: relative;
   overflow: hidden;
+  color-scheme: dark;
 }
 
 /* Animated gradient blobs */
@@ -48,6 +49,19 @@
 @media (max-width: 980px) {
   .auth-wrapper { grid-template-columns: 1fr; }
   .auth-art { display: none; }
+}
+
+/* Narrow screens */
+@media (max-width: 640px) {
+  .auth-panel { padding: 28px 16px; }
+  .auth-card { padding: 22px; border-radius: 14px; box-shadow: 0 12px 36px rgba(0,0,0,.35); }
+  .auth-wrapper.dark::before,
+  .auth-wrapper.dark::after { opacity: .35; filter: blur(60px); }
+}
+
+@media (max-width: 480px) {
+  .auth-panel { padding: 24px 12px; }
+  .auth-card { padding: 18px; border-radius: 12px; }
 }
 
 .auth-panel {
